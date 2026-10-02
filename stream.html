@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Live Stream | MethStreams</title>
   <meta name="description" content="Watch live sports streams on MethStreams. HD NFL, CFB, NBA, MLB, UFC & Soccer streams.">
+  <link rel="icon" type="image/png" href="https://skolten.info/uploads/favicon_1790386144.png">
+  <link rel="apple-touch-icon" href="https://skolten.info/uploads/favicon_1790386144.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     * {
@@ -14,10 +16,11 @@
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     }
     body {
-      background: #0b0e14;
-      color: #e9edf5;
-      line-height: 1.5;
+      background: #0e1621;
+      color: #e2e8f0;
+      line-height: 1.6;
       padding: 1.2rem 1.5rem 2rem;
+      -webkit-font-smoothing: antialiased;
     }
     .container {
       max-width: 1300px;
@@ -26,77 +29,70 @@
 
     /* ===== TOP HEADER BAR ===== */
     .top-header {
-      background: #111a26;
-      border: 1px solid #1f2d3f;
-      border-radius: 14px;
-      padding: 0.9rem 1.6rem;
+      background: #1e4e5f;
+      border-radius: 10px;
+      padding: 0.85rem 1.6rem;
       margin-bottom: 1.5rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.25);
     }
     .top-header .brand {
       display: flex;
       align-items: center;
       gap: 0.6rem;
-      font-size: 1.6rem;
+      font-size: 1.4rem;
       font-weight: 800;
-      letter-spacing: -0.5px;
-      background: linear-gradient(135deg, #ffffff 0%, #facc15 85%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      letter-spacing: -0.4px;
+      color: #ffffff;
       text-decoration: none;
     }
     .top-header .brand i {
-      font-size: 1.5rem;
-      color: #facc15;
-      -webkit-text-fill-color: #facc15;
+      font-size: 1.3rem;
+      color: #7dd3fc;
     }
     .top-header .header-right {
       display: flex;
       align-items: center;
-      gap: 0.8rem;
+      gap: 0.7rem;
     }
     .top-header .back-btn {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
-      background: #1b2637;
-      color: #e9edf5;
-      border: 1px solid #2e3e56;
-      padding: 0.5rem 1.1rem;
-      border-radius: 30px;
+      gap: 0.45rem;
+      background: rgba(0,0,0,0.2);
+      color: #e2e8f0;
+      border: none;
+      padding: 0.45rem 1rem;
+      border-radius: 6px;
       font-weight: 600;
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       cursor: pointer;
       text-decoration: none;
-      transition: 0.15s;
+      transition: 0.2s;
     }
     .top-header .back-btn:hover {
-      background: #facc15;
-      color: #0b0e14;
-      border-color: #facc15;
+      background: #7dd3fc;
+      color: #0e1621;
     }
-    .top-header .back-btn i { font-size: 0.75rem; }
+    .top-header .back-btn i { font-size: 0.72rem; }
     .top-header .live-dot {
       display: flex;
       align-items: center;
       gap: 0.4rem;
-      background: #1b2637;
-      padding: 0.35rem 0.9rem;
+      background: rgba(255,255,255,0.08);
+      padding: 0.3rem 0.85rem;
       border-radius: 30px;
-      border: 1px solid #2e3e56;
       font-weight: 600;
-      font-size: 0.75rem;
-      color: #e9edf5;
+      font-size: 0.7rem;
+      color: #e2e8f0;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.6px;
     }
     .top-header .live-dot i {
       color: #ef4444;
-      font-size: 0.55rem;
+      font-size: 0.5rem;
       animation: pulse 1.5s infinite;
     }
     @keyframes pulse {
@@ -110,14 +106,14 @@
       max-width: 728px;
       height: 90px;
       margin: 0 auto 1.5rem;
-      background: #111a26;
-      border: 1px dashed #2e3e56;
-      border-radius: 12px;
+      background: rgba(30, 78, 95, 0.4);
+      border: 1px dashed #1e4e5f;
+      border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #4a5d78;
-      font-size: 0.8rem;
+      color: #64748b;
+      font-size: 0.75rem;
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 1px;
@@ -146,12 +142,11 @@
 
     /* ===== MATCH INFO BAR ===== */
     .match-info-bar {
-      background: #111a26;
-      border: 1px solid #1f2d3f;
-      border-radius: 14px;
+      background: #1e4e5f;
+      border-radius: 12px;
       padding: 1rem 1.4rem;
       margin-bottom: 1rem;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
     }
     .match-info-top {
       display: flex;
@@ -161,27 +156,27 @@
       gap: 0.6rem;
       margin-bottom: 0.9rem;
       padding-bottom: 0.8rem;
-      border-bottom: 1px solid #1c2a3a;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
     }
     .match-league {
       display: flex;
       align-items: center;
       gap: 0.5rem;
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       font-weight: 700;
-      color: #facc15;
+      color: #7dd3fc;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.6px;
     }
-    .match-league i { font-size: 0.9rem; }
+    .match-league i { font-size: 0.85rem; }
     .match-date-time {
       display: flex;
       align-items: center;
       gap: 0.4rem;
-      font-size: 0.78rem;
-      color: #9aa9c1;
+      font-size: 0.75rem;
+      color: #cbd5e1;
     }
-    .match-date-time i { color: #facc15; font-size: 0.72rem; }
+    .match-date-time i { color: #7dd3fc; font-size: 0.7rem; }
 
     .match-teams-row {
       display: flex;
@@ -200,66 +195,65 @@
       width: 46px;
       height: 46px;
       object-fit: contain;
-      background: #1b2637;
+      background: rgba(0,0,0,0.2);
       border-radius: 50%;
       padding: 5px;
       flex-shrink: 0;
     }
     .match-team .team-name {
-      font-weight: 800;
-      font-size: 1.05rem;
-      color: #fff;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #ffffff;
     }
     .match-vs {
       font-weight: 700;
-      font-size: 0.85rem;
-      color: #facc15;
-      background: #1b2637;
-      width: 40px;
-      height: 40px;
+      font-size: 0.72rem;
+      color: #7dd3fc;
+      background: rgba(0,0,0,0.2);
+      width: 38px;
+      height: 38px;
       display: flex;
       align-items: center;
       justify-content: center;
       border-radius: 50%;
-      border: 1px solid #2e3e56;
       flex-shrink: 0;
+      letter-spacing: 0.5px;
     }
 
     /* ===== VIDEO PLAYER ===== */
     .player-wrapper {
-      background: #111a26;
-      border: 1px solid #1f2d3f;
-      border-radius: 14px;
+      background: #1e4e5f;
+      border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 10px 26px rgba(0,0,0,0.5);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
     }
     .player-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 0.7rem 1.2rem;
-      background: linear-gradient(90deg, #16202e 0%, #0f1722 100%);
-      border-bottom: 1px solid #1c2a3a;
+      background: rgba(0,0,0,0.15);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
     }
     .player-header .title {
       display: flex;
       align-items: center;
       gap: 0.5rem;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       font-weight: 700;
-      color: #fff;
+      color: #ffffff;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.6px;
     }
-    .player-header .title i { color: #facc15; }
+    .player-header .title i { color: #7dd3fc; }
     .player-header .quality-badge {
-      background: #1b2637;
-      color: #facc15;
+      background: rgba(125, 211, 252, 0.15);
+      color: #7dd3fc;
       font-size: 0.65rem;
       font-weight: 700;
       padding: 0.22rem 0.7rem;
       border-radius: 30px;
-      border: 1px solid #2e3e56;
+      letter-spacing: 0.5px;
     }
     .video-container {
       position: relative;
@@ -285,49 +279,46 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      color: #4a5d78;
+      color: #94a3b8;
       font-size: 0.95rem;
       gap: 0.7rem;
       text-align: center;
       padding: 1rem;
     }
-    .no-stream i { font-size: 2.2rem; color: #2e3e56; }
+    .no-stream i { font-size: 2.2rem; color: #64748b; }
 
-    /* ===== DISCORD BUTTON (only once, in sidebar) ===== */
+    /* ===== DISCORD BUTTON ===== */
     .discord-btn {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 0.6rem;
-      background: linear-gradient(135deg, #5865F2 0%, #4752c4 100%);
+      background: #5865F2;
       color: #fff;
-      padding: 0.85rem 1.2rem;
-      border-radius: 12px;
+      padding: 0.8rem 1.2rem;
+      border-radius: 10px;
       font-weight: 700;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       text-decoration: none;
-      box-shadow: 0 6px 16px rgba(88, 101, 242, 0.35);
-      transition: 0.15s;
-      border: 1px solid #6b76ff;
+      transition: 0.2s;
     }
-    .discord-btn i { font-size: 1.2rem; }
+    .discord-btn i { font-size: 1.1rem; }
     .discord-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 22px rgba(88, 101, 242, 0.5);
+      background: #4752c4;
     }
 
     /* ===== AD SLOT: SIDEBAR 300x250 ===== */
     .ad-slot-sidebar {
       width: 300px;
       height: 250px;
-      background: #111a26;
-      border: 1px dashed #2e3e56;
-      border-radius: 12px;
+      background: rgba(30, 78, 95, 0.4);
+      border: 1px dashed #1e4e5f;
+      border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #4a5d78;
-      font-size: 0.8rem;
+      color: #64748b;
+      font-size: 0.75rem;
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 1px;
@@ -338,14 +329,14 @@
     .ad-slot-sidebar-bottom {
       width: 300px;
       height: 60px;
-      background: #111a26;
-      border: 1px dashed #2e3e56;
-      border-radius: 12px;
+      background: rgba(30, 78, 95, 0.4);
+      border: 1px dashed #1e4e5f;
+      border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #4a5d78;
-      font-size: 0.75rem;
+      color: #64748b;
+      font-size: 0.72rem;
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 1px;
@@ -361,24 +352,24 @@
 
     /* ===== INFO NOTE ===== */
     .info-note {
-      background: #111a26;
-      border: 1px solid #1f2d3f;
-      border-radius: 14px;
+      background: #1e4e5f;
+      border-radius: 12px;
       padding: 1.1rem 1.5rem;
-      color: #8fa3c0;
+      color: #cbd5e1;
       font-size: 0.85rem;
-      line-height: 1.6;
+      line-height: 1.7;
     }
-    .info-note strong { color: #facc15; }
+    .info-note strong { color: #7dd3fc; }
 
     /* footer */
     .footer-note {
       margin-top: 2rem;
       font-size: 0.75rem;
-      color: #4a5d78;
+      color: #64748b;
       text-align: center;
-      border-top: 1px solid #1a2432;
+      border-top: 1px solid rgba(255,255,255,0.06);
       padding-top: 1.5rem;
+      letter-spacing: 0.3px;
     }
 
     /* ===== RESPONSIVE ===== */
@@ -397,21 +388,21 @@
     @media (max-width: 750px) {
       body { padding: 0.8rem 0.8rem 2rem; }
       .top-header { padding: 0.7rem 1rem; flex-wrap: wrap; gap: 0.6rem; }
-      .top-header .brand { font-size: 1.3rem; }
-      .top-header .brand i { font-size: 1.2rem; }
+      .top-header .brand { font-size: 1.15rem; }
+      .top-header .brand i { font-size: 1.1rem; }
       .match-info-bar { padding: 0.9rem 1rem; }
       .match-teams-row { gap: 0.8rem; }
       .match-team { min-width: auto; flex: 1; }
       .match-team img { width: 38px; height: 38px; }
-      .match-team .team-name { font-size: 0.9rem; }
-      .match-vs { width: 34px; height: 34px; font-size: 0.75rem; }
+      .match-team .team-name { font-size: 0.88rem; }
+      .match-vs { width: 32px; height: 32px; font-size: 0.65rem; }
       .match-info-top { flex-direction: column; align-items: flex-start; gap: 0.4rem; }
-      .discord-btn { font-size: 0.85rem; padding: 0.75rem 1rem; }
+      .discord-btn { font-size: 0.82rem; padding: 0.7rem 1rem; }
     }
     @media (max-width: 480px) {
       .match-team { flex-direction: column; gap: 0.3rem; text-align: center; }
       .match-team.right { flex-direction: column; }
-      .match-team .team-name { font-size: 0.85rem; }
+      .match-team .team-name { font-size: 0.82rem; }
       .match-team img { width: 36px; height: 36px; }
       .player-header { padding: 0.6rem 1rem; flex-wrap: wrap; gap: 0.5rem; }
     }
@@ -437,7 +428,7 @@
 
   <!-- ===== AD SLOT: TOP 728x90 ===== -->
   <div class="ad-slot-top">
-    <span>728 x 90 Banner Ad</span>
+    <script>document.write(atob("PHNjcmlwdD4KICBhdE9wdGlvbnMgPSB7CiAgICAna2V5JyA6ICc2Nzg2Y2E2MDE1MjRmNTY3MTVkNTg1OWEwZmM3NjU4ZicsCiAgICAnZm9ybWF0JyA6ICdpZnJhbWUnLAogICAgJ2hlaWdodCcgOiA5MCwKICAgICd3aWR0aCcgOiA3MjgsCiAgICAncGFyYW1zJyA6IHt9CiAgfTsKPC9zY3JpcHQ+CjxzY3JpcHQgc3JjPSJodHRwczovL21lZGljbmFpbHNoYXN0ZS5jb20vNjc4NmNhNjAxNTI0ZjU2NzE1ZDU4NTlhMGZjNzY1OGYvaW52b2tlLmpzIj48L3NjcmlwdD4="));</script>
   </div>
 
   <!-- ===== MAIN LAYOUT: PLAYER + SIDEBAR ===== -->
@@ -490,17 +481,19 @@
 
     </div>
 
-    <!-- RIGHT: DISCORD (only once) + ADS -->
+    <!-- RIGHT: DISCORD + ADS -->
     <div class="stream-sidebar">
       <a href="https://discord.gg/q2Vt5QHAz" target="_blank" rel="noopener noreferrer" class="discord-btn">
         <i class="fab fa-discord"></i> Join Our Discord
       </a>
+
       <div class="ad-slot-sidebar">
-        <span>300 x 250 Ad</span>
+        <script>document.write(atob("PHNjcmlwdD4KICBhdE9wdGlvbnMgPSB7CiAgICAna2V5JyA6ICc4YzE1OWZkNmZjZjUyYzljZDQ0YzgwYzlmNGJiY2ZjNCcsCiAgICAnZm9ybWF0JyA6ICdpZnJhbWUnLAogICAgJ2hlaWdodCcgOiAyNTAsCiAgICAnd2lkdGgnIDogMzAwLAogICAgJ3BhcmFtcycgOiB7fQogIH07Cjwvc2NyaXB0Pgo8c2NyaXB0IHNyYz0iaHR0cHM6Ly9tZWRpY25haWxzaGFzdGUuY29tLzhjMTU5ZmQ2ZmNmNTJjOWNkNDRjODBjOWY0YmJjZmM0L2ludm9rZS5qcyI+PC9zY3JpcHQ+"));</script>
       </div>
+
       <div class="ad-slot-sidebar-bottom">
         <div class="ad-inner-468">
-          <span>468 x 60 Banner Ad</span>
+          <script>document.write(atob("PHNjcmlwdD4KICBhdE9wdGlvbnMgPSB7CiAgICAna2V5JyA6ICcxMTM4YzVlMzhlNDZhZTY0ZTE0ZTZjOTZiMzJkMzE4NicsCiAgICAnZm9ybWF0JyA6ICdpZnJhbWUnLAogICAgJ2hlaWdodCcgOiA2MCwKICAgICd3aWR0aCcgOiA0NjgsCiAgICAncGFyYW1zJyA6IHt9CiAgfTsKPC9zY3JpcHQ+CjxzY3JpcHQgc3JjPSJodHRwczovL21lZGljbmFpbHNoYXN0ZS5jb20vMTEzOGM1ZTM4ZTQ2YWU2NGUxNGU2Yzk2YjMyZDMxODYvaW52b2tlLmpzIj48L3NjcmlwdD4="));</script>
         </div>
       </div>
     </div>
@@ -639,6 +632,7 @@ hs.src = ('//s10.histats.com/js15_as.js');
 })();</script>
 <noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?5048377&101" alt="website stats" border="0"></a></noscript>
 <!-- Histats.com  END  -->
-  
+
+
 </body>
 </html>
